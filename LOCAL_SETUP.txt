@@ -1,0 +1,9 @@
+WINDOWS LOCAL TEST
+1. In this folder, create a file named .env.local.bat using Notepad (Save as type: All Files).
+2. Put the following in it, replacing the password with your own strong password:
+   @echo off
+   set "ADMIN_PASSWORD=ChooseALongPassword123!"
+   set "DEMO_MODE=1"
+3. Double-click START_WINGOPS.bat.
+4. Open http://127.0.0.1:8000/admin on the same PC.
+IMPORTANT: Never expose this local demo server directly to the public Internet.

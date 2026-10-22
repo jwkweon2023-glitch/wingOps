@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: wingops-remote
+    runtime: docker
+    plan: starter
+    healthCheckPath: /
+    envVars:
+      - key: WING_DB_PATH
+        value: /var/data/wingops.db
+      - key: COOKIE_SECURE
+        value: "1"
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: ADMIN_PASSWORD
+        sync: false
+    disk:
+      name: wingops-data
+      mountPath: /var/data
+      sizeGB: 1
